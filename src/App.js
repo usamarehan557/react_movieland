@@ -2,15 +2,12 @@ import { useEffect, useState } from "react";
 import './App.css';
 import SearchIcon from './search.svg';
 import MovieCard from "./MovieCard";
-// 7c1042a7
 
 const key = process.env.REACT_APP_API_KEY;
-const API_URL = `http://www.omdbapi.com/?i=tt3896198&apikey=${key}`;
+const API_URL = `https://www.omdbapi.com/?i=tt3896198&apikey=${key}`;
 
 
 function App() {
-
-  console.log(API_URL);
 
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -22,7 +19,7 @@ function App() {
   }
 
   useEffect(() => {
-    searchMovies('Spiderman');
+    searchMovies('batman');
   }, []);
 
   return (
